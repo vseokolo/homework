@@ -53,3 +53,4 @@ warn_return_any = true
 exclude = ".git", "venv"
 
 force_single_line = true
+'''
