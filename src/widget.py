@@ -1,6 +1,10 @@
 from typing import Union
 '''аннотируем тип переменной'''
 
+from datetime import datetime
+'''импортируем модуль datetime'''
+
+
 
 def mask_account_card(card_info: Union[str]) -> str:
     '''Создаём функцию, принимающая информацию о карте в виде строки'''
@@ -29,5 +33,18 @@ def mask_account_card(card_info: Union[str]) -> str:
 
         return card_info
 
-
 print(mask_account_card('MasterCard 7158300734726758'))
+
+def get_date(user_date):
+
+    '''определяем функцию для получения даты'''
+
+    user_year =  datetime.strptime(user_date[:10], "%Y-%m-%d").year
+    user_month = datetime.strptime(user_date[:10], "%Y-%m-%d").month
+    user_day = datetime.strptime(user_date[:10], "%Y-%m-%d").day
+    '''получаем год, месяц и день из строки пользователя'''
+
+    return f'{user_day:02}.{user_month:02}.{user_year}'
+    '''возвращаем отформатированную дату'''
+
+print(get_date("2024-03-11T02:26:18.671407"))
