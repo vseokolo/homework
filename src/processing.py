@@ -14,7 +14,7 @@ print(filter_by_state(([{'id': 41428829, 'state': 'EXECUTED', 'date': '2019-07-0
 
 def sort_by_date(dictionary_info: List[Dict], ) -> List[Dict]:
     return sorted(dictionary_info, key=lambda item: item['date'], reverse=True)
-"""определяем функцию для фильтрования операций по статусу"""
+"""определяем функцию для фильтрования операций по дате"""
 
 print(
     sort_by_date(
